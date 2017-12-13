@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald');
+
+@su: 1vw;
+
+@media all and (max-width: 768px) {
+    @su: 7.68px;
+    @sideMargin: 19.5vw;
+    @import (multiple) "style";
+}
+
+@media all and (min-width: 769px) {
+    @su: 1vw;
+    @sideMargin: 19.5*@su;
+    @import (multiple) "style";
+}
