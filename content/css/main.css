@@ -26,6 +26,7 @@
     position: absolute;
     padding: 4%;
     width: 100%;
+    z-index: 1;
   }
   #logo {
     float: left;
@@ -37,6 +38,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   nav {
     float: right;
@@ -53,13 +55,13 @@
   nav ul li a {
     display: block;
     padding: 8px;
+    z-index: 1;
   }
   /*Slide*/
   .slide {
     display: none;
   }
   .slide.current {
-    display: block;
     width: 100%;
     overflow: hidden;
   }
@@ -174,19 +176,23 @@
     height: 3vw;
   }
   .shoe {
+    position: relative;
+    height: 25vw;
     float: left;
     width: 19vw;
     margin-right: 2vw;
     margin-top: 2vw;
   }
   .shoe img {
+    position: absolute;
     width: 100%;
+    z-index: -1;
   }
   .shoe p {
-    margin: 0 0 2vw 2vw;
-    font-size: 2vw;
+    margin: 17vw 0 2vw 2vw;
+    font-size: 1.5vw;
   }
-  .shoe:nth-of-type(3) {
+  .shoe:nth-of-type(3n) {
     margin-right: 0;
   }
   /*Banner*/
@@ -202,13 +208,13 @@
   .banner img {
     width: 100%;
   }
-  .bannerInfoBox {
+  .banner .bannerInfoBox {
     margin: 0 0 4vw 2vw;
     width: 50%;
     position: absolute;
     bottom: 0;
   }
-  .banner h2 {
+  .banner .bannerInfoBox h2 {
     color: white;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
@@ -216,14 +222,14 @@
     font-size: 1.75vw;
     margin: 0;
   }
-  .banner p {
+  .banner .bannerInfoBox p {
     color: #7c8b95;
     margin: 0 0 1.25vw 0;
     font-family: 'Lato', sans-serif;
     line-height: 1.25vw;
     font-size: 1vw;
   }
-  .banner a {
+  .banner .bannerInfoBox a {
     text-decoration: underline;
     font-size: 1vw;
   }
@@ -258,6 +264,7 @@
     position: absolute;
     padding: 4%;
     width: 100%;
+    z-index: 1;
   }
   #logo {
     float: left;
@@ -269,6 +276,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   nav {
     float: right;
@@ -285,13 +293,13 @@
   nav ul li a {
     display: block;
     padding: 8px;
+    z-index: 1;
   }
   /*Slide*/
   .slide {
     display: none;
   }
   .slide.current {
-    display: block;
     width: 100%;
     overflow: hidden;
   }
@@ -406,19 +414,23 @@
     height: 3vw;
   }
   .shoe {
+    position: relative;
+    height: 25vw;
     float: left;
     width: 19vw;
     margin-right: 2vw;
     margin-top: 2vw;
   }
   .shoe img {
+    position: absolute;
     width: 100%;
+    z-index: -1;
   }
   .shoe p {
-    margin: 0 0 2vw 2vw;
-    font-size: 2vw;
+    margin: 17vw 0 2vw 2vw;
+    font-size: 1.5vw;
   }
-  .shoe:nth-of-type(3) {
+  .shoe:nth-of-type(3n) {
     margin-right: 0;
   }
   /*Banner*/
@@ -434,13 +446,13 @@
   .banner img {
     width: 100%;
   }
-  .bannerInfoBox {
+  .banner .bannerInfoBox {
     margin: 0 0 4vw 2vw;
     width: 50%;
     position: absolute;
     bottom: 0;
   }
-  .banner h2 {
+  .banner .bannerInfoBox h2 {
     color: white;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
@@ -448,14 +460,14 @@
     font-size: 1.75vw;
     margin: 0;
   }
-  .banner p {
+  .banner .bannerInfoBox p {
     color: #7c8b95;
     margin: 0 0 1.25vw 0;
     font-family: 'Lato', sans-serif;
     line-height: 1.25vw;
     font-size: 1vw;
   }
-  .banner a {
+  .banner .bannerInfoBox a {
     text-decoration: underline;
     font-size: 1vw;
   }

@@ -27,6 +27,7 @@ header {
     position: absolute;
     padding: 4%;
     width: 100%;
+    z-index: 1;
 }
 #logo {
     float: left;
@@ -38,6 +39,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
+    z-index: 1;
 }
 nav {
     float: right;
@@ -51,24 +53,24 @@ nav {
             a {
                 display: block;
                 padding: 8px;
+                z-index: 1;
             }
         }
     }
 }
 
 /*Slide*/
-
 .slide{
     display: none;
-}
-.slide.current{
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    img {
+    &.current{
         width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
     }
 }
+
 #paginationContainer {
     text-align: center;
     margin-top: -3vw;
@@ -124,13 +126,14 @@ nav {
         font-weight: bolder;
         float: left;
         font-size: 1.1*@su;
-    }
-    a.hollow {
-        background-color: transparent;
-        color: white;
-    }
-    a:last-of-type {
-        margin-left: 1*@su;
+        
+        &.hollow {
+            background-color: transparent;
+            color: white;
+        }
+        &:last-of-type {
+            margin-left: 1*@su;
+        }
     }
 }
 
@@ -179,20 +182,26 @@ nav {
     }
 }
 .shoe {
+    position: relative;
+    height: 25*@su;
+    
     float: left;
     width: ((100 - @sideMargin * 2)-4*@su)/3;
     margin-right: 2*@su;
     margin-top: 2*@su;
     img {
+        position: absolute;
+        
         width: 100%;
+        z-index: -1;
     }
     p {
-        margin: 0 0 2*@su 2*@su;
-        font-size: 2*@su;
+        margin: 17*@su 0 2*@su 2*@su;
+        font-size: 1.5*@su;
     }
-}
-.shoe:nth-of-type(3){
-    margin-right: 0;
+    &:nth-of-type(3n){
+        margin-right: 0;
+    }
 }
 
 /*Banner*/
@@ -208,29 +217,29 @@ nav {
     img {
         width: 100%;
     }
-}
-.bannerInfoBox {
-    margin: 0 0 4*@su 2*@su;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-}
-.banner h2 {
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-weight: lighter;
-    font-size: 1.75*@su;
-    margin: 0;
-}
-.banner p {
-    color: rgb(124,139,149);
-    margin: 0 0 1.25*@su 0;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.25*@su;
-    font-size: 1*@su;
-}
-.banner a {
-    text-decoration: underline;
-    font-size: 1*@su;
+    .bannerInfoBox {
+        margin: 0 0 4*@su 2*@su;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        h2 {
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-weight: lighter;
+            font-size: 1.75*@su;
+            margin: 0;
+        }
+        p {
+            color: rgb(124,139,149);
+            margin: 0 0 1.25*@su 0;
+            font-family: 'Lato', sans-serif;
+            line-height: 1.25*@su;
+            font-size: 1*@su;
+        }
+        a {
+            text-decoration: underline;
+            font-size: 1*@su;
+        }
+    }
 }
