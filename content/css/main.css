@@ -31,18 +31,20 @@
     float: left;
   }
   #logo img {
-    height: 12.288px;
+    height: 1.6vw;
     max-height: 30px;
     min-height: 20px;
     position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
   }
   nav {
     float: right;
     font-family: 'Lato', sans-serif;
-    width: 50%;
   }
   nav ul {
     list-style: none;
+    margin: 0;
   }
   nav ul li {
     display: inline;
@@ -64,6 +66,42 @@
   .slide.current img {
     width: 100%;
   }
+  #paginationContainer {
+    text-align: center;
+    margin-top: -3vw;
+  }
+  #paginationContainer .dot {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    border-radius: 50%;
+    height: 0.75vw;
+    width: 0.75vw;
+    cursor: pointer;
+    margin: 0.4vw;
+  }
+  #paginationContainer .dot:before,
+  #paginationContainer .dot:after {
+    content: '';
+    width: 0.8vw;
+    border-top: 1px solid #dfdfdf;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  #paginationContainer .dot:before {
+    right: 100%;
+  }
+  #paginationContainer .dot:after {
+    left: 100%;
+  }
+  #paginationContainer .dot:first-of-type:before,
+  #paginationContainer .dot:last-of-type:after {
+    display: none;
+  }
+  #paginationContainer .current {
+    background-color: #dfdfdf;
+  }
   .slideBtnContainer {
     position: absolute;
     text-align: center;
@@ -77,67 +115,95 @@
     border-radius: 5px;
     box-sizing: initial;
     color: #492974;
-    width: 61.44px;
-    height: 12.672px;
-    padding: 10px;
+    width: 8vw;
+    height: 1.65vw;
+    padding: 0.8vw;
     font-weight: bolder;
     float: left;
-    font-size: 8.448px;
+    font-size: 1.1vw;
   }
   .slideBtnContainer a.hollow {
     background-color: transparent;
     color: white;
   }
   .slideBtnContainer a:last-of-type {
-    margin-left: 20px;
+    margin-left: 1vw;
   }
   /*Shoes*/
   #shoeContainer {
-    margin-top: 50px;
+    margin-top: 5vw;
     margin-left: 19.5vw;
     width: 61vw;
   }
   #shoeContainer input,
-  #shoeContainer .shoe {
+  #shoeContainer .shoe,
+  #shoeContainer #searchContainer a {
     border: #dfdfdf solid 1px;
     border-radius: 5px;
   }
   #shoeContainer a {
     color: black;
   }
-  #searchContainer input {
-    width: 100%;
+  #shoeContainer #searchContainer {
+    position: relative;
+  }
+  #shoeContainer #searchContainer input {
+    width: 90%;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1vw;
+    padding-left: 2vw;
+  }
+  #shoeContainer #searchContainer a {
+    position: absolute;
+    bottom: 0;
+    border-left: none;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 10%;
+  }
+  #shoeContainer #searchContainer a img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  #shoeContainer #searchContainer input,
+  #shoeContainer #searchContainer a {
+    height: 3vw;
   }
   .shoe {
     float: left;
-    width: 10.09333333vw;
-    margin-right: 15.36px;
-    margin-top: 15.36px;
+    width: 19vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
   }
   .shoe img {
     width: 100%;
   }
   .shoe p {
-    margin: 0 0 15.36px 15.36px;
+    margin: 0 0 2vw 2vw;
+    font-size: 2vw;
   }
   .shoe:nth-of-type(3) {
     margin-right: 0;
   }
   /*Banner*/
   #bannerContainer {
-    margin-top: 50px;
+    margin-top: 5vw;
     margin-left: 19.5vw;
   }
   .banner {
     float: left;
-    width: 234.24vw;
+    width: 30.5vw;
     position: relative;
   }
   .banner img {
     width: 100%;
   }
   .bannerInfoBox {
-    margin: 0 0 30.72px 15.36px;
+    margin: 0 0 4vw 2vw;
     width: 50%;
     position: absolute;
     bottom: 0;
@@ -147,19 +213,22 @@
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-weight: lighter;
-    font-size: 13.44px;
+    font-size: 1.75vw;
     margin: 0;
   }
   .banner p {
     color: #7c8b95;
-    margin: 0 0 9.6px 0;
+    margin: 0 0 1.25vw 0;
     font-family: 'Lato', sans-serif;
-    line-height: 9.6px;
-    font-size: 7.68px;
+    line-height: 1.25vw;
+    font-size: 1vw;
   }
   .banner a {
     text-decoration: underline;
-    font-size: 7.68px;
+    font-size: 1vw;
+  }
+  #paginationContainer {
+    margin-top: -6vw;
   }
 }
 @media all and (min-width: 769px) {
@@ -198,14 +267,16 @@
     max-height: 30px;
     min-height: 20px;
     position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
   }
   nav {
     float: right;
     font-family: 'Lato', sans-serif;
-    width: 50%;
   }
   nav ul {
     list-style: none;
+    margin: 0;
   }
   nav ul li {
     display: inline;
@@ -227,6 +298,42 @@
   .slide.current img {
     width: 100%;
   }
+  #paginationContainer {
+    text-align: center;
+    margin-top: -3vw;
+  }
+  #paginationContainer .dot {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    border-radius: 50%;
+    height: 0.75vw;
+    width: 0.75vw;
+    cursor: pointer;
+    margin: 0.4vw;
+  }
+  #paginationContainer .dot:before,
+  #paginationContainer .dot:after {
+    content: '';
+    width: 0.8vw;
+    border-top: 1px solid #dfdfdf;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  #paginationContainer .dot:before {
+    right: 100%;
+  }
+  #paginationContainer .dot:after {
+    left: 100%;
+  }
+  #paginationContainer .dot:first-of-type:before,
+  #paginationContainer .dot:last-of-type:after {
+    display: none;
+  }
+  #paginationContainer .current {
+    background-color: #dfdfdf;
+  }
   .slideBtnContainer {
     position: absolute;
     text-align: center;
@@ -242,7 +349,7 @@
     color: #492974;
     width: 8vw;
     height: 1.65vw;
-    padding: 10px;
+    padding: 0.8vw;
     font-weight: bolder;
     float: left;
     font-size: 1.1vw;
@@ -252,24 +359,51 @@
     color: white;
   }
   .slideBtnContainer a:last-of-type {
-    margin-left: 20px;
+    margin-left: 1vw;
   }
   /*Shoes*/
   #shoeContainer {
-    margin-top: 50px;
+    margin-top: 5vw;
     margin-left: 19.5vw;
     width: 61vw;
   }
   #shoeContainer input,
-  #shoeContainer .shoe {
+  #shoeContainer .shoe,
+  #shoeContainer #searchContainer a {
     border: #dfdfdf solid 1px;
     border-radius: 5px;
   }
   #shoeContainer a {
     color: black;
   }
-  #searchContainer input {
-    width: 100%;
+  #shoeContainer #searchContainer {
+    position: relative;
+  }
+  #shoeContainer #searchContainer input {
+    width: 90%;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1vw;
+    padding-left: 2vw;
+  }
+  #shoeContainer #searchContainer a {
+    position: absolute;
+    bottom: 0;
+    border-left: none;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 10%;
+  }
+  #shoeContainer #searchContainer a img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  #shoeContainer #searchContainer input,
+  #shoeContainer #searchContainer a {
+    height: 3vw;
   }
   .shoe {
     float: left;
@@ -282,13 +416,14 @@
   }
   .shoe p {
     margin: 0 0 2vw 2vw;
+    font-size: 2vw;
   }
   .shoe:nth-of-type(3) {
     margin-right: 0;
   }
   /*Banner*/
   #bannerContainer {
-    margin-top: 50px;
+    margin-top: 5vw;
     margin-left: 19.5vw;
   }
   .banner {
