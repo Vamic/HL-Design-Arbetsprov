@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Oswald');
 
 @su: 1vw;
+@sideMargin: 19.5*@su; 
 
+@import "style";
+    
 @media all and (max-width: 768px) {
-    @su: 1vw;
-    @sideMargin: 19.5*@su; 
-    @import (multiple) "style";
-    #paginationContainer {
-        margin-top: -6vw; 
+    #paginationContainer { 
+        margin-top: -6vw;
     }
 }
-
-@media all and (min-width: 769px) {
-    @su: 1vw;
-    @sideMargin: 19.5*@su;
-    @import (multiple) "style";
-} 
